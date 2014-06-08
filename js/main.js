@@ -7,16 +7,30 @@ $(document).ready(function(){
 	$("#current").html("Current turn:<b>"+player+"</b>");
 	$("td").on('click',function(){
 		var filled=$(this).attr('id');
-		flag++;
 		if(flag%2==0){
-			player=p2;
-			$("#"+filled).html("X");
+			player=p1;
+			if($("#"+filled).html()==""){
+				$("#"+filled).html("X");
+				flag++;
+			}
+			else{
+				console.log("sorry you can't");
+			}
+			
 		}
 		else{
-			player=p1;
-			$("#"+filled).html("O");
+			player=p2;
+			if($("#"+filled).html()==""){
+				$("#"+filled).html("O");
+				flag++;
+			}
+			else{
+				console.log("sorry you can't");
+			}
 		}
+		
 		$("#current").html("Current turn:<b>"+player+"</b>");
+		
 	});
 
 });
