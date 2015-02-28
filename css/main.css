@@ -17,7 +17,12 @@ select,
 textarea {
     color: #222;
 }
-
+.timeClass {
+  font-family:arial,verdana,helvetica,sans-serif;
+  font-weight:normal;
+  font-size:14pt;
+font:bold;
+}
 html {
     font-size: 1em;
     line-height: 1.4;
