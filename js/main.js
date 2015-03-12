@@ -2,7 +2,10 @@ function newgame(){
 
 	var p1 = window.prompt("First player's name", "P1");
 	var p2 = window.prompt("Second player's name", "P2");
-	
+	if(p1==null)
+		p1="Player1";
+	if(p2==null)
+		p2="Player2";
 	var info="First player:<b>"+p1+"</b>, Second player:<b>"+p2+"</b>";
 	$("#info").html(info);
 	var flag=1;var player=p1;var win_flag=0;
